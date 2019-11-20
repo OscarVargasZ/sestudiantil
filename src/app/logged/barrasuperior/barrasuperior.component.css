@@ -1,0 +1,36 @@
+.fondo{
+    background: url(src/app/logged/barrasuperior/banner-background.png);
+    background-repeat: repeat-y;
+    background-size: cover;
+}
+ul.a {
+    list-style-type: none;
+    position:relative;
+}
+li.despegable{
+    display: none;
+}
+.nav li ul.a{
+    display: none;
+    
+}
+.nav li:hover > ul.a{
+    display: block;
+    z-index: 20000;
+   position: fixed;
+   background: white;
+   right: 10px;
+}
+.btn-outline-success
+{
+    border-color: transparent;
+}
+.dimensiones{
+    width: 50px !important;
+    height: 50px !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+.image{
+    z-index: 1;
+}

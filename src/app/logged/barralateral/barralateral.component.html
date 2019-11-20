@@ -1,0 +1,53 @@
+<div class="bg-light border-right" id="sidebar-wrapper" *ngIf="on">
+  <div class="list-group list-group-flush">
+
+    <!---  Inicia Profesor     --->
+    <div *ngIf="profesor">
+      <!-------Menu mis alumnos-->
+      <a class="list-group-item list-group-item-action bg-light" (click)="alumnoscambia()">Alumnos</a>
+      <ul *ngIf="alumnos">
+        <li class="no"><a routerLink="/logged/alumnos" class="list-group-item list-group-item-action bg-light">Mis Alumnos</a></li>
+      </ul>
+      <!-------Menu Reuniones-->
+      <a class="list-group-item list-group-item-action bg-light" (click)="reunionescambia()">Reuniones
+      </a>
+      <ul *ngIf="reuniones">
+          <li class="no"><a class="list-group-item list-group-item-action bg-light" routerLinks="/logged/reuniones">Agendadas</a></li>
+          <li class="no"><a class="list-group-item list-group-item-action bg-light">Agendar</a></li>
+      </ul>
+      <!-------Menu Derivaciones-->
+      <a class="list-group-item list-group-item-action bg-light" (click)="derivacionescambia()">Derivaciones</a>
+      <ul *ngIf="derivaciones">
+          <li class="no"><a class="list-group-item list-group-item-action bg-light">Realizadas</a></li>
+          <li class="no"><a class="list-group-item list-group-item-action bg-light">Creada</a></li>
+      </ul>
+
+      <!-------Menu Calendario-->
+      <a class="list-group-item list-group-item-action bg-light">Calendario</a>
+    </div>
+
+
+    <!-------Inicia alto cargo-->
+    <div *ngIf="admin">
+      <a class="list-group-item list-group-item-action bg-light" (click)="alumnosncambia()">Alumnos</a>
+      <ul *ngIf="alumnosn">
+          <li class="no"><a class="list-group-item list-group-item-action bg-light">Lista Alumnos</a></li>
+          <li class="no"><a class="list-group-item list-group-item-action bg-light">EnSeguimiento</a></li>
+      </ul>
+    </div>
+
+    
+    <!-------Inicia Psicologo-->
+    <div *ngIf="psicologo">
+      <a href="#" class="list-group-item list-group-item-action bg-light"></a>
+    </div>
+
+
+    <!-------Inicia Admin Psicologo-->
+    <div *ngIf="adminpsicologo">
+      <a href="#" class="list-group-item list-group-item-action bg-light"></a>
+    </div>
+
+
+  </div>
+</div>
